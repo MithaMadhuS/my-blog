@@ -1,0 +1,125 @@
+/* .article {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.article h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.article p {
+  margin-bottom: 1rem;
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.article pre {
+  background: #f5f5f5;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.article blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #555;
+  margin: 1rem 0;
+} */
+
+.article {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #242424;
+  background-color: #ffffff;
+}
+
+.article h1,
+.article h2,
+.article h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.article h1 {
+  font-size: 2.5rem;
+}
+
+.article h2 {
+  font-size: 2rem;
+}
+
+.article h3 {
+  font-size: 1.5rem;
+}
+
+.article p {
+  margin-bottom: 1.5rem;
+}
+
+.article blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #ccc;
+  color: #666;
+  font-style: italic;
+}
+
+.article a {
+  color: #1a8917;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.article ul,
+.article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 4px;
+}
+
+.article code {
+  background-color: #f2f2f2;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+}
+
+.article pre {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 5px;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
