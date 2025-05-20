@@ -1,6 +1,6 @@
 
 
-![Figure 1: RAG MEME](/assets/RAG_meme1.png)
+![Figure 1: RAG MEME](/my-blog/assets/RAG_meme1.png)
 
 Lately, I’ve been noticing an undeniable buzz around Retrieval-Augmented Generation (RAG) everywhere I turn. Maybe it’s because it’s become a core part of what I do for a living—or maybe the universe just really wants me to pay attention. LinkedIn posts, YouTube tutorials, blog articles—you name it, everyone seems to be talking about it. The recent surge makes sense, especially with models like Gemini and GPT pushing context windows beyond one million tokens. That’s like giving your AI an incredible memory—but with great memory comes great responsibility.
 
