@@ -11,7 +11,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: isProd ? `/${repoName}/` : '/', // 🧠 this fixes 404s
+    // publicPath: isProd ? `/${repoName}/` : '/', // 🧠 this fixes 404s
+    publicPath: '/my-blog/',
     clean: true,
   },
   resolve: {
@@ -32,6 +33,13 @@ module.exports = {
         test: /\.md$/,
         use: 'raw-loader',
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][hash][ext]',
+        },
+      },
     ],
   },
   devServer: {
@@ -46,5 +54,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-  ],
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public',
+          globOptions: {
+            ignore: ['**/index.html'],
+          },
+        },
+      ],
+    }),
+ ],
 };

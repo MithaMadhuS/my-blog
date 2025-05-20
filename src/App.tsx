@@ -31,12 +31,13 @@
 
 import React from 'react';
 import BlogPost from './BlogPost';
-import post1 from './posts/post1.md';
+import RAG_writeup from './posts/RAG_writeup.md';
 
 function App() {
   return (
     <div className="App">
-      <BlogPost content={post1} title="Exploring Retrieval-Augmented Generation (RAG) Beyond Basics" date="2025-05-15"/>
+      <img src="/assets/abc.jpg" alt="ABC"/>
+      <BlogPost content={RAG_writeup} title="Exploring Retrieval-Augmented Generation (RAG) Beyond Basics" date="2025-05-15"/>
     </div>
   );
 }
