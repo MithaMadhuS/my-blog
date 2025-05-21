@@ -1,5 +1,4 @@
 
-
 ![Figure 1: RAG MEME](/my-blog/assets/RAG_meme1.png)
 
 Lately, I’ve been noticing an undeniable buzz around Retrieval-Augmented Generation (RAG) everywhere I turn. Maybe it’s because it’s become a core part of what I do for a living—or maybe the universe just really wants me to pay attention. LinkedIn posts, YouTube tutorials, blog articles—you name it, everyone seems to be talking about it. The recent surge makes sense, especially with models like Gemini and GPT pushing context windows beyond one million tokens. That’s like giving your AI an incredible memory—but with great memory comes great responsibility.
@@ -20,16 +19,16 @@ Buckle up — we’re about to dive deep into the real mechanics of modern RAG s
 ### What is RAG?
 In simple terms, Retrieval-Augmented Generation (RAG) is a method that makes large language models (LLMs) smarter by giving them access to extra information. It works by finding the most useful documents or data for a question and showing them to the LLM, helping it give better answers. This approach is great for chatbots and Q&A systems that need up-to-date facts or expert knowledge.
 
-RAG consists of three main components:
-1.Indexing.␣␣
-2.Retrieval.␣␣
-3.Generation.␣␣
+RAG consists of three main components:  
+1.Indexing  
+2.Retrieval  
+3.Generation  
 
-#### Indexing:
+**Indexing:**
 Indexing is the process of organizing a large collection of documents so they can be quickly searched. It can involve SQL databases, graph databases, or vector stores. In RAG, it means converting text into a searchable format. This might be a simple keyword list or advanced graph embeddings. Effective indexing ensures fast and accurate retrieval of relevant data.
-#### Retrieval:
+**Retrieval:**
 This step finds the most relevant documents based on a user’s question. It can use keyword matching or semantic search techniques. The better the retrieval mechanism, the more relevant the context for generation.
-#### Generation:
+**Generation:**
 Below is a Python code snippet demonstrating a basic Retrieval-Augmented Generation (RAG) setup using OpenAI and LangChain. After executing each code block, I highly recommend visiting the LangSmith to explore how each step of the pipeline is executed in detail.
 
 ```python
@@ -124,7 +123,7 @@ Multi-query is a technique that takes a single search question and rephrases it 
 Multi-query works because of the nature of semantic embeddings, where text meanings are represented in high-dimensional vector space. Slight differences in wording can cause a query to appear in a different region of this space. By creating multiple versions of the same query, the system "fans out" across different embedding spaces. This increases the retrieval likelihood because similar documents aligned with these alternative phrasings might otherwise be missed.
 
 #### How It Works
-##### 1. Query Reformulation:
+**1. Query Reformulation:**
 The original query is rephrased in several ways. For example, a query like:
 
 "Impact of climate change on agriculture"
@@ -137,13 +136,13 @@ can be rephrased as:
 
 "Agricultural consequences of climate change."
 
-##### 2. Document Retrieval:
+**2. Document Retrieval:**
 Each reformulated query is used to retrieve a set of relevant documents.
 
-##### 3. Union of Results:
+**3. Union of Results:**
 The results from all reformulations are combined and deduplicated to form a broader, more relevant document set.
 
-##### 4. Final Answer Generation (RAG):
+**4. Final Answer Generation (RAG):**
 A language model generates the final answer using the context of all unique retrieved documents.
 
 ```python
@@ -226,7 +225,7 @@ Each document is assigned a score based on its position (rank) in the list of re
 
 **Score = 1 / (rank + k)**
 
-**rank:** The position of the document in the results list (starting from 1).
+**rank:** The position of the document in the results list (starting from 1).  
 **k:** A smoothing constant (commonly set to 60) to prevent division by zero and ensure even lower-ranked documents receive a small score.
 The higher a document ranks in a list, the higher the score it receives.
 
@@ -316,7 +315,7 @@ if __name__ == "__main__":
     print("Final Answer:\n", answer)
 ``` 
 
-### Least to Most :
+### Least to Most:
 Least-to-Most prompting is a technique that helps language models tackle complex query by breaking them down into smaller, manageable steps. This method works in two main stages:
 
 ![Figure 4: RAG MEME](/my-blog/assets/least_most.png)
@@ -549,6 +548,10 @@ This concludes part one of our series on RAG beyond the basics.
 
 Stay tuned—things are about to get really interesting.
 
-
 ![Figure 4: RAG MEME](/my-blog/assets/final_meme.png)
 
+### Resource
+1. **RAG from Scratch** by Langchain [YouTube](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)
+2. **Least-to-Most** by Google [arxiv](https://arxiv.org/pdf/2205.10625)
+3. **Interleaving Retrieval** by Stony Brook [arxiv](https://arxiv.org/pdf/2205.106254)
+4. Lance Martin (LangChain), **Learn RAG From Scratch** [Github](https://github.com/langchain-ai/rag-from-scratch)
