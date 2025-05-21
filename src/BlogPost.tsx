@@ -13,7 +13,12 @@ export default function BlogPost({ content, title, date }: BlogPostProps) {
   return (
     <article className="article">
       <h1>{title}</h1>
-      <p  className={date}>{new Date(date).toDateString()}</p>
+      <div className="author-info">
+        <img className='profile-picture' src="/my-blog/assets/ganesh.jpeg" alt='Ganesh'></img>
+        <span className="author-name">Ganesh</span>
+        <span  className='time'>20 min read</span>
+        <span className='date'>{new Date(date).toDateString().split(' ').slice(1).join(' ')}</span>
+      </div>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {content}
       </ReactMarkdown>

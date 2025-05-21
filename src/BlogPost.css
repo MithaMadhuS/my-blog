@@ -1,44 +1,5 @@
-/* .article {
-  max-width: 700px;
-  margin: 4rem auto;
-  padding: 0 1.5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.article h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-
-.article p {
-  margin-bottom: 1rem;
-}
-
-.article img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
-.article pre {
-  background: #f5f5f5;
-  padding: 1rem;
-  overflow-x: auto;
-}
-
-.article blockquote {
-  border-left: 4px solid #ccc;
-  padding-left: 1rem;
-  color: #555;
-  margin: 1rem 0;
-} */
-
 .article {
-  max-width: 700px;
+  max-width: 800px;
   margin: 3rem auto;
   padding: 0 1rem;
   font-family: "Georgia", serif;
@@ -122,4 +83,23 @@
   font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
+}
+
+.author-info .profile-picture{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: unset;
+  margin-right: 20px;
+}
+.author-info .author-name{
+  margin-right: 20px;
+}
+.author-info .time{
+  margin-right: 20px;
+}
+.article .author-info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
