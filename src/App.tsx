@@ -36,7 +36,7 @@ import RAG_writeup from './posts/RAG_writeup.md';
 function App() {
   return (
     <div className="App">
-      <BlogPost content={RAG_writeup} title="Exploring Retrieval-Augmented Generation (RAG) Beyond Basics" date="2025-05-15"/>
+      <BlogPost content={RAG_writeup} title="Unlocking Advanced RAG: Where the Real Magic Begins" date="2025-05-15"/>
     </div>
   );
 }

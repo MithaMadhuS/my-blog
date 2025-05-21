@@ -21,16 +21,14 @@ Buckle up — we’re about to dive deep into the real mechanics of modern RAG s
 In simple terms, Retrieval-Augmented Generation (RAG) is a method that makes large language models (LLMs) smarter by giving them access to extra information. It works by finding the most useful documents or data for a question and showing them to the LLM, helping it give better answers. This approach is great for chatbots and Q&A systems that need up-to-date facts or expert knowledge.
 
 RAG consists of three main components:
-1.Indexing
-2.Retrieval
-3.Generation
+1.Indexing.␣␣
+2.Retrieval.␣␣
+3.Generation.␣␣
 
 #### Indexing:
 Indexing is the process of organizing a large collection of documents so they can be quickly searched. It can involve SQL databases, graph databases, or vector stores. In RAG, it means converting text into a searchable format. This might be a simple keyword list or advanced graph embeddings. Effective indexing ensures fast and accurate retrieval of relevant data.
-
 #### Retrieval:
 This step finds the most relevant documents based on a user’s question. It can use keyword matching or semantic search techniques. The better the retrieval mechanism, the more relevant the context for generation.
-
 #### Generation:
 Below is a Python code snippet demonstrating a basic Retrieval-Augmented Generation (RAG) setup using OpenAI and LangChain. After executing each code block, I highly recommend visiting the LangSmith to explore how each step of the pipeline is executed in detail.
 
@@ -105,7 +103,7 @@ Query translation is the first step in an advanced Retrieval-Augmented Generatio
 
 By expanding and normalizing the query—expressing it in multiple forms—query translation helps the system better capture user intent. This approach generates multiple similar embeddings for the query, increasing the chances of matching the right documents, even when the original wording is unclear or ambiguous.
 
-![Figure 3: RAG MEME](/my-blog/assets/RAG_querytranslation.png)
+![Figure 3: RAG MEME](/my-blog/assets/query_translation.png)
 
 There are several effective strategies for query translation, each leveraging Large Language Models (LLMs):
 
@@ -226,7 +224,7 @@ Each query is submitted to a retrieval system (e.g., search engine or vector dat
 Step-3 : Reciprocal Rank Fusion (RRF) Scoring
 Each document is assigned a score based on its position (rank) in the list of results using the following formula:
 
-<p align="center"><strong>Score = 1 / (rank + k)</strong></p>
+**Score = 1 / (rank + k)**
 
 **rank:** The position of the document in the results list (starting from 1).
 **k:** A smoothing constant (commonly set to 60) to prevent division by zero and ensure even lower-ranked documents receive a small score.
